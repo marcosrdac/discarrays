@@ -12,12 +12,12 @@ def discarray(filename, mode='r', dtype=float, shape=None, order='C'):
     '''
     file_mode = f'{mode[0]}b{mode[1:]}'
     with open(filename, file_mode) as io:
-        if 'w' in mode:
+        if mode.startswith('w'):
             assert shape is not None
             shape = tuple(np.asarray(shape).flatten())
             ndims_shape = np.asarray([len(shape), *shape], dtype=np.int64)
             ndims_shape.tofile(io)
-        if 'r' in mode:
+        if mode.startswith('r'):
             ndims = np.fromfile(io, dtype=np.int64, count=1)[0]
             shape = tuple(np.fromfile(io, dtype=np.int64, count=ndims))
         offset = io.tell()
