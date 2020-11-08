@@ -16,7 +16,7 @@ so that Python interface will read and save column-major order (a.k.a. Fortran-c
 
 ## *I'm sorry, what is MMAP?*
 
-You have probably used the "read" command for reading files before in any programming language. This function is actually calling the operational system to get data from your ROM via the "READ" SYSCALL. The fact is that there are other SYSCALLs, and MMAP is one of them.
+You have probably used the "read" command for reading files before in any programming language. This function is actually calling the operational system to get data from your ROM via the "READ" SYSCALL. The fact is that there are other SYSCALLs, and MMAP is one of them (read more about it: [System Call - Wikipedia](https://en.wikipedia.org/wiki/System_call).
 
 MMAP is used for mapping files between ROM an RAM. It is useful for many purposes (i.e. reading and writing files, IPC, etc.). When using MMAP, the system automatically handles allocation, syncronization and deallocation of memory between RAM and ROM as your code asks.
 
