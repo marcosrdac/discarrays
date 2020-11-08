@@ -3,10 +3,10 @@ import numpy as np
 
 def discarray(filename, mode='r', dtype=float, shape=None, order='C'):
     '''
-    This function is an interface to a memory map array creation. This interface
-    has a header of Int64 values, the first one of them being the number of
-    dimensions present in the array, (ndim), and then its dimensions (shape).
-    After the header comes the body: a flattened version of that array.
+    This function is an interface to a memory-mapped array creation. This
+    interface has a header of Int64 values, the first one of them being the 
+    number of dimensions present in the array, (ndim), and then its dimensions
+    (shape). After the header comes the body: a flattened version of that array.
     WARNING: This interface will not save the data types, so you must inform it
     everytime you read a file.
     '''
