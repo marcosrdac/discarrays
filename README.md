@@ -2,7 +2,7 @@
 
 This repository has modules for using the MMAP syscall with arrays.
 
-I wrote these modules so that using MMAP with Python and Julia becomes extremely easy (see the "usage_<language>.<ext>" files).
+I wrote these modules so that using MMAP with Python and Julia becomes extremely easy (see the "usage_\<language\>.\<ext\>" files).
 
 
 ## Array compatibility between Python/C and Julia/Fortran programs
